@@ -1,48 +1,130 @@
 {
-  "salesGuide": {
-    "insights": {
-      "risks": [],
-      "probability": {
-        "value": 0,
-        "level": "",
-        "factors": []
-      },
-      "opportunities": []
+  "timing": {
+    "timingStage": "数字化转型加速期",
+    "analysisBasis": [
+      "2025年获得两化融合管理体系AAA级和数字化转型管理体系AAA级双认证",
+      "2025年入选工信部首批制造业质量管理能力高等级企业名单",
+      "EAM项目已立项，预算100万，年底前上线"
+    ],
+    "entryStrategy": "EAM项目已明确立项，9个月实施周期，老板支持审批快。聚焦EAM快速切入，强调定制开发优势，尽快安排技术交流明确功能边界。",
+    "urgency": "高"
+  },
+
+  "stageAdvice": {
+    "focus": "聚焦EAM核心需求，快速建立技术信任",
+    "approach": "主动提供定制化 vs SaaS 对比分析，安排技术交流明确功能边界，展示行业案例",
+    "risks": "SaaS厂商报价低、交付快，容易让客户心动；切忌漫无边际地承诺功能，9个月周期很紧"
+  },
+
+  "competitors": [
+    {
+      "name": "SaaS厂商（用友/金蝶等）",
+      "threat": "高",
+      "strengths": [
+        "标准化产品，上线快",
+        "品牌知名度高，国企接受度好",
+        "初始投入相对较低"
+      ],
+      "weaknesses": [
+        "定制能力有限，难以满足特殊场景",
+        "数据存公有云，国企安全顾虑",
+        "深度二次开发受限"
+      ],
+      "counterStrategy": "强调定制开发优势，提供SaaS无法满足的深度功能，如OEE算法定制、备件预测模型；突出私有化部署满足国企安全要求"
     },
-
-    "timing": {
-      "timingStage": "",
-      "analysisBasis": [],
-      "entryStrategy": "",
-      "urgency": ""
+    {
+      "name": "Excel/人工现状",
+      "threat": "中",
+      "strengths": [
+        "零成本，无实施周期",
+        "团队习惯，无学习阻力"
+      ],
+      "weaknesses": [
+        "数据孤岛，无法OEE分析",
+        "无法预警，故障被动响应",
+        "无法追溯，责任不清"
+      ],
+      "counterStrategy": "用ROI说话：OEE提升20%带来的收益远超投入；用案例打动：同类企业降本增效数据"
     },
-
-    "competitors": [],
-
-    "decisionChain": {
-      "decisionMakers": [],
-      "influencers": [],
-      "blockers": [],
-      "decisionProcess": "",
-      "approvalPath": [],
-      "timeline": ""
-    },
-
-    "nextActions": [],
-
-    "tracking": {
-      "coverageRate": 0,
-      "coveredCount": 0,
-      "totalCount": 0,
-      "categories": []
-    },
-
-    "followups": [],
-
-    "metadata": {
-      "generatedAt": null,
-      "updatedAt": null,
-      "version": "1.0"
+    {
+      "name": "内部自建",
+      "threat": "低",
+      "strengths": [
+        "完全自主可控",
+        "无对外采购顾虑"
+      ],
+      "weaknesses": [
+        "周期长，人力成本高",
+        "缺乏行业经验，容易踩坑",
+        "后续维护负担重"
+      ],
+      "counterStrategy": "强调行业经验和成熟模块，自建成本远高于采购；提供源码级合作方案满足可控性"
     }
+  ],
+
+  "decisionChain": {
+    "decisionMakers": [
+      { "name": "叶又生", "department": "董事长", "reason": "最终决策人，国有背景企业由董事长拍板重大项目" },
+      { "name": "唐兆庆", "department": "总经理", "reason": "日常运营负责人，EAM项目直接影响生产效率" }
+    ],
+    "influencers": [
+      { "name": "袁勇", "department": "劳模创新工作室", "reason": "技术权威，意见对技术方案影响大" },
+      { "name": "设备主管", "department": "生产/设备部", "reason": "EAM最终用户，功能需求来源" },
+      { "name": "IT负责人", "department": "信息部", "reason": "技术方案把关，集成可行性评估" }
+    ],
+    "blockers": [
+      { "name": "IT负责人", "department": "信息部", "reason": "可能担心系统集成复杂度和运维负担" },
+      { "name": "设备部门", "department": "生产/设备部", "reason": "可能担心学习成本和变革阻力" }
+    ],
+    "decisionProcess": "老板支持，审批流程快。技术方案由IT和设备部门评估，最终由董事长/总经理决策。",
+    "approvalPath": ["设备/IT部门评估", "总经理审核", "董事长批准"],
+    "timeline": "预计1-2个月完成选型和决策"
+  },
+
+  "avoidTopics": [
+    "公司规模和资金实力（客户是国有背景，自身资金充裕）",
+    "行业资质和认证（客户已是专精特新重点小巨人，资质齐全）",
+    "数字化基础薄弱（客户已获两化融合AAA级，数字化成熟度高）"
+  ],
+
+  "interviewGuide": {
+    "quickScreening": [
+      { "question": "你们现在设备管理主要靠什么方式？Excel还是系统？", "purpose": "判断数字化基础和变革阻力" },
+      { "question": "目前设备管理最头疼的问题是什么？故障多还是备件管理难？", "purpose": "识别核心痛点，匹配EAM功能" },
+      { "question": "老板对EAM项目的期望是什么？有没有明确的上线时间？", "purpose": "判断项目紧急程度和预算可能性" }
+    ],
+    "closingQuestions": [
+      { "question": "今天交流下来，您觉得EAM系统最需要解决的三个问题是什么？", "purpose": "确认需求理解是否准确" },
+      { "question": "下一步您希望我们提供什么？方案建议书还是产品演示？", "purpose": "推动下一步行动" }
+    ]
+  },
+
+  "nextActions": [
+    { "action": "安排技术交流，明确EAM功能边界", "deadline": "1周内", "owner": "售前" },
+    { "action": "准备EAM方案建议书（含定制化 vs SaaS对比）", "deadline": "1周内", "owner": "方案" },
+    { "action": "了解现有系统情况（ERP/PLM等）", "deadline": "首次技术交流时", "owner": "售前" },
+    { "action": "准备EAM行业案例和ROI分析", "deadline": "1周内", "owner": "销售" }
+  ],
+
+  "tracking": {
+    "coverageRate": 60,
+    "coveredCount": 6,
+    "totalCount": 10,
+    "categories": [
+      { "name": "时机判断", "status": "completed" },
+      { "name": "竞对分析", "status": "completed" },
+      { "name": "决策链", "status": "completed" },
+      { "name": "访谈提纲", "status": "completed" },
+      { "name": "现有系统", "status": "pending" },
+      { "name": "设备数量", "status": "pending" }
+    ]
+  },
+
+  "metadata": {
+    "generatedAt": "2026-03-23T00:00:00Z",
+    "updatedAt": "2026-03-23T00:00:00Z",
+    "version": "1.0",
+    "basedOn": ["profile.json v1.0", "requirements.json v0.3"],
+    "changeSummary": []
   }
 }
