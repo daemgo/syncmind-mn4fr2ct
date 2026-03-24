@@ -1,95 +1,168 @@
 {
   "profile": {
-    "companyName": "",
-    "shortName": "",
+    "companyName": "宜昌长机科技有限责任公司",
+    "shortName": "长机科技",
     "isListed": false,
     "stockCode": "",
-    "website": "",
-    "industry": "",
-    "subIndustry": "",
-    "scale": "",
-    "mainBusiness": "",
-    "products": [],
-    "targetCustomers": [],
-    "businessModel": "",
-    "rating": "",
-    "tags": [],
-
-    "summary": "",
+    "website": "https://www.cjmt.com.cn/",
+    "industry": "高端装备制造",
+    "subIndustry": "数控机床/齿轮加工设备",
+    "scale": "中型企业",
+    "mainBusiness": "数控插齿机、滚齿机、铣齿机、刮齿机等齿轮加工机床研发制造",
+    "products": [
+      { "name": "数控插齿机", "description": "Φ120-Φ5000mm全系列，工信部单项冠军产品" },
+      { "name": "数控滚齿机", "description": "Φ500-Φ6000mm系列，加工精度达GB/T10095.1-2001 6-7级" },
+      { "name": "数控铣齿机", "description": "Φ800-Φ8000mm系列，适用于风电、回转支承等行业" },
+      { "name": "刮齿机系列", "description": "直驱技术，效率比插齿快3-5倍，加工精度GB5级" },
+      { "name": "齿条加工机床", "description": "插齿/铣齿/磨齿系列，长度L320-L3000mm" },
+      { "name": "机床再制造", "description": "提供旧机床升级改造服务" }
+    ],
+    "targetCustomers": [
+      "风电设备制造商",
+      "汽车及工程机械企业",
+      "航空航天企业",
+      "船舶制造企业",
+      "减速机生产企业",
+      "回转支承制造商"
+    ],
+    "businessModel": "B2B直销+代理商渠道，提供设备销售+再制造服务+技术支持",
+    "rating": "AAA",
+    "tags": [
+      "专精特新小巨人",
+      "单项冠军产品",
+      "高新技术企业",
+      "两化融合AAA级",
+      "数字化转型AAA级",
+      "纳税信用十连A",
+      "数控插齿机龙头",
+      "智能制造",
+      "国家级重点小巨人"
+    ],
+    "summary": "国家专精特新重点小巨人企业，中国唯一的全系列插齿机制造基地，专注于齿轮加工机床研发生产50余年",
 
     "registration": {
-      "foundedDate": "",
-      "registeredCapital": "",
+      "foundedDate": "2004年（前身长江机床厂始建于1968年）",
+      "registeredCapital": "1460万人民币",
       "paidInCapital": "",
-      "ownershipType": "",
+      "ownershipType": "国有独资企业/集团子公司",
       "branches": {
         "count": "",
         "locations": []
       },
-      "legalRisks": "",
-      "operatingAnomalies": "",
-      "penalties": "",
-      "summary": ""
+      "legalRisks": "无重大诉讼、失信、被执行记录",
+      "operatingAnomalies": "无",
+      "penalties": "无",
+      "summary": "注册资本1460万与总资产5亿余元存在显著差异，表明公司经过多年积累和发展，资产规模远超初始注册资本。国有独资背景，实际控制人为湖北省联合发展投资集团。"
     },
 
     "policyAnalysis": {
-      "isSpecialized": false,
-      "isDigitalTransformation": false,
+      "isSpecialized": true,
+      "isDigitalTransformation": true,
       "isESG": false,
-      "isHighTech": false,
-      "policySupportLevel": "",
-      "leverageStrategy": ""
+      "isHighTech": true,
+      "policySupportLevel": "国家级重点小巨人",
+      "leverageStrategy": "已获两化融合AAA级和数字化转型AAA级双认证，建议主打智能制造、质量管理、生产管理相关的数字化解决方案"
     },
 
     "timing": {
-      "currentPhase": "",
-      "evidence": "",
-      "entryStrategy": ""
+      "currentPhase": "数字化转型加速期",
+      "evidence": "2025年获得两化融合管理体系AAA级和数字化转型管理体系AAA级双认证；2025年入选工信部首批制造业质量管理能力高等级企业名单；2025年10月举办齿加工装备及刮齿工艺技术研讨会",
+      "entryStrategy": "结合其数字化转型战略，主打智能制造、质量管理、生产管理相关的数字化解决方案"
     },
 
     "creditRisk": {
-      "legalRisk": "",
-      "operationalRisk": "",
-      "creditRating": "",
+      "legalRisk": "低",
+      "operationalRisk": "低",
+      "creditRating": "纳税信用十连A",
       "warnings": [],
-      "salesAdvice": ""
+      "salesAdvice": "信用状况优良，国有背景，风险可控"
     },
 
     "organization": {
-      "type": "",
-      "decisionChain": "",
-      "keyPersons": [],
-      "salesStrategy": ""
+      "type": "国有独资企业，集团化管理",
+      "decisionChain": "董事长叶又生→总经理唐兆庆→职能部门负责人→技术/采购/生产总监→项目经理",
+      "keyPersons": [
+        { "name": "叶又生", "title": "董事长" },
+        { "name": "唐兆庆", "title": "总经理" },
+        { "name": "袁勇", "title": "劳模创新工作室负责人[技术权威]" },
+        { "name": "董事会秘书处", "title": "负责对外联络和战略决策" }
+      ],
+      "salesStrategy": "针对国有背景企业，建议从技术创新合作、数字化转型赋能切入，依托专精特新资质和国家级认证建立信任，通过行业协会（中国机床工具工业协会）和政府渠道（湖北省经信厅）建立连接"
     },
 
     "strategy": {
-      "phase": "",
-      "growthStage": "",
-      "competitivePosition": "",
-      "digitalMaturity": "",
-      "analysisPath": "",
-      "informationQuality": "",
-      "expansionSignals": [],
+      "phase": "数字化转型加速期",
+      "growthStage": "中等偏上——已启动数字化转型并有明确战略，但具体实施阶段待验证",
+      "competitivePosition": "插齿机细分领域国内第一，中国唯一的全系列插齿机制造基地",
+      "digitalMaturity": "高（已获两化融合AAA级和数字化转型AAA级双认证）",
+      "analysisPath": "B",
+      "informationQuality": "中等（官网+工商数据，部分假设待验证）",
+      "expansionSignals": [
+        "2025年获得两化融合管理体系AAA级和数字化转型管理体系AAA级双认证",
+        "2025年入选工信部首批制造业质量管理能力高等级企业名单",
+        "2025年10月举办齿加工装备及刮齿工艺技术研讨会"
+      ],
       "contractionSignals": [],
       "riskSignals": []
     },
 
-    "techStack": {
-      "current": [],
-      "inferred": [],
-      "maturity": "",
-      "direction": ""
+    "painPoints": [
+      { "area": "生产管理", "description": "多品种小批量定制化生产，排产复杂度高[假设待验证]", "severity": "中" },
+      { "area": "质量管理", "description": "已通过高等级质量管理认证，但质量追溯和过程控制仍有提升空间", "severity": "中" },
+      { "area": "供应链管理", "description": "作为离散型制造企业，零部件供应链协同和库存管理存在挑战[假设待验证]", "severity": "中" },
+      { "area": "设备管理", "description": "生产设备价值高，OEE分析和预测性维护需求强烈", "severity": "中高" },
+      { "area": "订单管理", "description": "定制化设备订单交付周期长，交期透明度有待提升[假设待验证]", "severity": "中" }
+    ],
+
+    "opportunities": [
+      { "area": "智能制造", "description": "已获数字化转型AAA级认证，MES/APS/数字孪生等解决方案契合度高", "likelihood": "高" },
+      { "area": "质量管理", "description": "已获质量管理高等级认证，QMS/SPC/追溯系统可助力持续提升", "likelihood": "中高" },
+      { "area": "设备管理", "description": "高价值设备密集，预测性维护和OEE优化ROI明确", "likelihood": "中高" }
+    ],
+
+    "competition": {
+      "industryRank": "插齿机细分领域国内第一",
+      "marketShare": "插齿机细分市场份额领先，已向市场提供1万余台套设备",
+      "mainCompetitors": [
+        "秦川机床（齿轮机床业务）",
+        "海天精工（数控机床）",
+        "创世纪（数控机床）",
+        "日发精机（数控机床）",
+        "国外厂商：格里森、利勃海尔等高端市场"
+      ],
+      "knownClients": [
+        "风电行业客户[假设待验证]",
+        "汽车转向器企业",
+        "工程机械制造商",
+        "回转支承生产企业",
+        "航空航天企业[假设待验证]"
+      ]
     },
 
-    "keyMetrics": [],
+    "techStack": {
+      "current": [],
+      "inferred": ["两化融合管理体系", "数字化转型管理体系", "DCMM数据管理能力认证"],
+      "maturity": "较高（已通过多项国家级数字化认证）",
+      "direction": "智能制造、数字化转型"
+    },
+
+    "keyMetrics": [
+      { "name": "总资产", "value": "5亿余元" },
+      { "name": "净资产", "value": "超4.2亿元" },
+      { "name": "累计销售", "value": "1万余台套设备" }
+    ],
 
     "metadata": {
-      "createdAt": "",
-      "updatedAt": "",
-      "createdBy": "",
-      "version": "",
-      "sources": [],
-      "confidence": 0
+      "createdAt": "2026-03-23T00:00:00Z",
+      "updatedAt": "2026-03-23T00:00:00Z",
+      "createdBy": "AI",
+      "version": "1.0",
+      "sources": [
+        "https://www.cjmt.com.cn/",
+        "https://aiqicha.baidu.com/detail/compinfo?pid=xlTM-TogKuTwNeG5yYy2A-FfVYYxl8pz3Amd",
+        "http://www.whht.org.cn/meizhou/news_33/8958.html"
+      ],
+      "confidence": 75
     }
   }
 }
