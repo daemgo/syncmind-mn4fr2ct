@@ -1,150 +1,742 @@
 {
-  "currentVersion": "",
+  "currentVersion": "v0.3",
   "status": "draft",
-
-  "versions": [],
-
+  "versions": [
+    {
+      "version": "v0.1",
+      "createdAt": "2026-03-23T00:00:00Z",
+      "trigger": "cold-start",
+      "inputSummary": "基于客户档案推演",
+      "changeSummary": [
+        "从档案推演7条业务需求",
+        "从档案推演3条技术需求",
+        "知识库无匹配数据，仅用制造业痛点库推演"
+      ]
+    },
+    {
+      "version": "v0.2",
+      "createdAt": "2026-03-23T00:00:00Z",
+      "trigger": "客户沟通更新",
+      "inputSummary": "客户明确EAM项目需求、预算100万、年底上线",
+      "changeSummary": [
+        "REQ-003（EAM）置信度升级为high，客户明确表态",
+        "确认预算约100万",
+        "确认硬性时间节点：2026年12月前上线",
+        "确认决策支持：老板支持，审批快",
+        "竞对信息：正在调研SaaS版EAM，考虑定制开发"
+      ]
+    },
+    {
+      "version": "v0.3",
+      "createdAt": "2026-03-23T00:00:00Z",
+      "trigger": "需求聚焦",
+      "inputSummary": "聚焦EAM核心需求",
+      "changeSummary": [
+        "REQ-001/002/004/005/006/007状态改为deactivated（非EAM相关）",
+        "更新scope，inScope仅保留EAM",
+        "移除suspectedNeeds中的非EAM项",
+        "更新currentChallenges/painPoints/expectedOutcomes，聚焦设备管理"
+      ]
+    }
+  ],
   "current": {
     "salesInput": {
       "salesPerson": "",
-      "lastUpdated": "",
+      "lastUpdated": "2026-03-23",
       "overallAssessment": {
-        "customerIntent": "",
-        "projectUrgency": "",
-        "budgetSituation": "",
-        "competitionStatus": "",
-        "winProbability": "",
-        "keyObstacles": [],
-        "confidenceLevel": ""
+        "customerIntent": "明确（EAM系统为立项项目）",
+        "projectUrgency": "高（9个月实施周期）",
+        "budgetSituation": "约100万（范围明确）",
+        "competitionStatus": "存在SaaS竞对，客户倾向定制",
+        "winProbability": 60,
+        "keyObstacles": ["SaaS厂商竞对", "9个月实施周期紧张"],
+        "confidenceLevel": "medium"
       },
       "keyPersons": [],
       "realNeeds": {
-        "explicitNeeds": [],
+        "explicitNeeds": ["EAM设备管理系统"],
         "implicitNeeds": [],
         "suspectedNeeds": [],
         "needsNotMentioned": []
       },
       "decisionFactors": {
-        "primaryFactor": "",
-        "secondaryFactors": [],
+        "primaryFactor": "定制化能力 vs SaaS标准化",
+        "secondaryFactors": ["实施周期", "私有化部署"],
         "dealBreakers": []
       },
-      "notes": "",
-      "concerns": [],
-      "suggestions": []
+      "notes": "客户正在调研SaaS版EAM，但表示考虑定制开发，是syncMind切入机会",
+      "concerns": [
+        "现有系统情况待了解",
+        "EAM具体功能范围待明确"
+      ],
+      "suggestions": [
+        "尽快安排技术交流，明确EAM功能边界",
+        "提供定制化vsSaaS对比分析",
+        "了解现有系统情况（ERP等）"
+      ]
     },
-
     "sources": {
       "meetings": [],
       "documents": [],
-      "communications": [],
-      "observations": []
+      "communications": [
+        {
+          "date": "2026-03-23",
+          "type": "沟通",
+          "summary": "客户明确要做EAM系统，预算约100万，要求年底前上线。正在调研SaaS版EAM，也考虑定制开发。老板支持，审批流程快。"
+        }
+      ],
+      "observations": ["客户档案分析", "制造业痛点库匹配", "客户直接沟通"]
     },
-
     "background": {
-      "businessContext": "",
-      "currentChallenges": [],
-      "triggerEvent": "",
-      "currentSystems": [],
+      "businessContext": "宜昌长机科技是国家专精特新重点小巨人企业，中国唯一的全系列插齿机制造基地，专注于齿轮加工机床研发生产50余年。公司主营数控插齿机、滚齿机、铣齿机、刮齿机等齿轮加工机床，采用B2B直销+代理商渠道模式，同时提供设备销售+再制造服务+技术支持。",
+      "currentChallenges": [
+        "高价值设备密集，OEE分析和预测性维护需求强烈",
+        "设备故障突发，维护计划执行率待提升",
+        "备件库存管理存在优化空间"
+      ],
+      "triggerEvent": "客户明确EAM系统立项，预算100万，年底前上线",
+      "currentSystems": [
+        "已有一定数字化基础（两化融合AAA级、数字化转型AAA级）[假设待验证]",
+        "具体系统待了解"
+      ],
       "currentProcess": {
-        "overview": "",
+        "overview": "作为离散型制造业企业，采用多品种小批量定制化生产模式[假设待验证]",
         "steps": [],
         "bottlenecks": []
       },
-      "painPoints": [],
-      "expectedOutcomes": []
+      "painPoints": [
+        { "area": "设备管理", "description": "设备故障突发，OEE低", "severity": "中高" },
+        { "area": "备件管理", "description": "备件库存不合理，缺件/积压并存", "severity": "中" },
+        { "area": "维护管理", "description": "预防性维护计划执行率低", "severity": "中" }
+      ],
+      "expectedOutcomes": [
+        "提升设备OEE 20%+",
+        "降低设备停机时间",
+        "提升预防性维护计划执行率",
+        "优化备件库存成本"
+      ]
     },
-
-    "needs": [],
-
-    "users": [],
-
+    "needs": [
+      {
+        "id": "REQ-001",
+        "category": "business",
+        "title": "生产计划数字化排程",
+        "description": "实现生产计划数字化排程和进度可视化，支持多品种小批量排产算法、生产进度实时看板、插单/改单响应机制",
+        "priority": "must",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "基于制造业痛点库-生产管理：多品种小批量定制化生产，排产复杂度高",
+          "raw": null
+        },
+        "status": "deactivated",
+        "module": "APS",
+        "userStory": "作为生产计划员，我希望系统能自动生成排产方案并实时展示进度，以便快速响应插单需求",
+        "acceptanceCriteria": [
+          "支持多品种小批量排产算法",
+          "生产进度实时看板",
+          "插单/改单响应机制"
+        ],
+        "relatedPainPoints": ["生产管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-002",
+        "category": "business",
+        "title": "全流程质量追溯",
+        "description": "建立全流程质量追溯和过程控制体系，包括关键工序质量数据采集、产品质量追溯链、不合格品处理流程",
+        "priority": "must",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "基于制造业痛点库-质量管理+客户档案：已通过高等级质量管理认证，但质量追溯和过程控制仍有提升空间",
+          "raw": null
+        },
+        "status": "deactivated",
+        "module": "QMS",
+        "userStory": "作为质量经理，我希望能够追溯产品全生命周期的质量数据，以便快速处理客诉和质量问题",
+        "acceptanceCriteria": [
+          "关键工序质量数据采集",
+          "产品质量追溯链",
+          "不合格品处理流程"
+        ],
+        "relatedPainPoints": ["质量管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-003",
+        "category": "business",
+        "title": "设备全生命周期管理",
+        "description": "实现设备全生命周期管理和OEE分析，包括设备台账管理、OEE实时监控和分析、预防性维护计划、备件库存预警",
+        "priority": "must",
+        "confidence": "high",
+        "source": {
+          "type": "customer-stated",
+          "detail": "客户明确表述要做EAM系统",
+          "raw": "客户明确要做EAM系统"
+        },
+        "status": "active",
+        "module": "EAM",
+        "userStory": "作为设备主管，我希望能够实时监控设备OEE并预测维护需求，以减少停机时间",
+        "acceptanceCriteria": [
+          "设备台账管理",
+          "OEE实时监控和分析",
+          "预防性维护计划",
+          "备件库存预警"
+        ],
+        "relatedPainPoints": ["设备管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.2",
+        "history": [
+          {
+            "version": "v0.2",
+            "change": "置信度由low升级为high，客户明确表态要做EAM系统"
+          }
+        ]
+      },
+      {
+        "id": "REQ-004",
+        "category": "business",
+        "title": "订单全生命周期管理",
+        "description": "实现订单全生命周期管理和交期透明化，包括订单录入和变更管理、生产进度跟踪、交期预警、客户门户（可选）",
+        "priority": "should",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "基于制造业痛点库-订单管理+客户档案：定制化设备订单交付周期长，交期透明度有待提升",
+          "raw": null
+        },
+        "status": "deactivated",
+        "module": "OMS",
+        "userStory": "作为销售，我希望客户能自助查询订单进度，以减少交期咨询工作量",
+        "acceptanceCriteria": [
+          "订单录入和变更管理",
+          "生产进度跟踪",
+          "交期预警",
+          "客户门户（可选）"
+        ],
+        "relatedPainPoints": ["订单管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": [],
+        "dependencies": ["REQ-001"]
+      },
+      {
+        "id": "REQ-005",
+        "category": "business",
+        "title": "供应商协同管理",
+        "description": "建立供应商协同和库存管理机制，包括供应商门户、采购订单协同、库存实时查询、缺料预警",
+        "priority": "should",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "基于制造业痛点库-供应链管理+客户档案：离散型制造企业，零部件供应链协同和库存管理存在挑战",
+          "raw": null
+        },
+        "status": "deactivated",
+        "module": "SRM",
+        "userStory": "作为采购员，我希望供应商能协同响应采购订单，以便减少缺料停产风险",
+        "acceptanceCriteria": [
+          "供应商门户",
+          "采购订单协同",
+          "库存实时查询",
+          "缺料预警"
+        ],
+        "relatedPainPoints": ["供应链管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-006",
+        "category": "functional",
+        "title": "MES车间执行管理",
+        "description": "实现MES车间执行和数字化采集，包括工单管理、报工和采集、异常管理、绩效分析",
+        "priority": "should",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "基于客户档案-机会分析：已获数字化转型AAA级认证，MES/APS/数字孪生等解决方案契合度高",
+          "raw": null
+        },
+        "status": "deactivated",
+        "module": "MES",
+        "userStory": "作为车间主任，我希望能够实时监控车间生产状态，以便快速处理异常",
+        "acceptanceCriteria": [
+          "工单管理",
+          "报工和采集",
+          "异常管理",
+          "绩效分析"
+        ],
+        "relatedPainPoints": ["生产管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-007",
+        "category": "business",
+        "title": "设备再制造业务管理",
+        "description": "建立设备再制造业务管理系统，包括旧机评估和入库、再制造工单管理、更换件追溯、出厂检测",
+        "priority": "could",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "基于客户档案-商业模式：提供设备销售+再制造服务+技术支持，再制造业务需要系统支撑",
+          "raw": null
+        },
+        "status": "deactivated",
+        "module": "再制造管理",
+        "userStory": "作为再制造业务负责人，我希望系统能管理旧机评估和再制造全流程，以保证服务质量",
+        "acceptanceCriteria": [
+          "旧机评估和入库",
+          "再制造工单管理",
+          "更换件追溯",
+          "出厂检测"
+        ],
+        "relatedPainPoints": [],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "TECH-001",
+        "category": "technical",
+        "title": "现有系统集成",
+        "description": "支持与现有ERP系统集成，包括API接口开放、数据同步机制、单点登录",
+        "priority": "must",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "基于客户档案-技术栈：数字化成熟度较高，已有ERP等系统，需要保证集成能力",
+          "raw": null
+        },
+        "status": "active",
+        "module": "集成平台",
+        "userStory": "作为IT管理员，我希望新系统能与现有ERP无缝集成，以避免信息孤岛",
+        "acceptanceCriteria": [
+          "API接口开放",
+          "数据同步机制",
+          "单点登录"
+        ],
+        "relatedPainPoints": [],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "TECH-002",
+        "category": "non-functional",
+        "title": "私有化部署支持",
+        "description": "支持私有化部署或混合云模式，包括支持私有化部署、数据安全保障、灾备方案",
+        "priority": "should",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "基于客户档案-组织类型：国有独资企业，数据安全要求高，可能需要私有化部署",
+          "raw": null
+        },
+        "status": "active",
+        "module": "基础设施",
+        "userStory": "作为信息安全负责人，我希望系统能支持私有化部署，以满足国企合规要求",
+        "acceptanceCriteria": [
+          "支持私有化部署",
+          "数据安全保障",
+          "灾备方案"
+        ],
+        "relatedPainPoints": [],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "TECH-003",
+        "category": "functional",
+        "title": "移动端和车间终端",
+        "description": "支持移动端应用和车间终端，包括移动端APP或小程序、车间看板大屏、离线采集支持",
+        "priority": "could",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "基于客户档案-生产模式：车间现场需要移动报工、看板展示等",
+          "raw": null
+        },
+        "status": "active",
+        "module": "前端应用",
+        "userStory": "作为车间操作工，我希望能用手机扫码报工，以便提升操作便利性",
+        "acceptanceCriteria": [
+          "移动端APP或小程序",
+          "车间看板大屏",
+          "离线采集支持"
+        ],
+        "relatedPainPoints": [],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      }
+    ],
+    "users": [
+      {
+        "id": "USR-001",
+        "role": "生产计划员",
+        "count": "待确认",
+        "responsibilities": ["生产计划编制", "排产调整", "进度跟踪"],
+        "painPoints": ["排产靠Excel，效率低", "插单响应慢"],
+        "goals": ["提升排产效率", "快速响应插单"]
+      },
+      {
+        "id": "USR-002",
+        "role": "质量经理",
+        "count": "待确认",
+        "responsibilities": ["质量管理", "客诉处理", "质量追溯"],
+        "painPoints": ["质量追溯困难", "客诉处理慢"],
+        "goals": ["快速追溯", "减少客诉"]
+      },
+      {
+        "id": "USR-003",
+        "role": "设备主管",
+        "count": "待确认",
+        "responsibilities": ["设备管理", "维护计划", "OEE分析"],
+        "painPoints": ["故障突发", "OEE低", "维护靠经验"],
+        "goals": ["降低停机时间", "提升设备利用率"]
+      },
+      {
+        "id": "USR-004",
+        "role": "车间操作工",
+        "count": "待确认",
+        "responsibilities": ["生产操作", "报工", "异常反馈"],
+        "painPoints": ["报工麻烦", "进度查询不便"],
+        "goals": ["便捷报工", "实时了解进度"]
+      },
+      {
+        "id": "USR-005",
+        "role": "销售",
+        "count": "待确认",
+        "responsibilities": ["订单跟进", "客户沟通", "交期确认"],
+        "painPoints": ["交期查询麻烦", "客户咨询多"],
+        "goals": ["快速了解交期", "减少咨询工作量"]
+      }
+    ],
     "scope": {
-      "inScope": [],
-      "outOfScope": [],
-      "futureScope": [],
-      "phases": [],
-      "priorityMatrix": []
+      "inScope": ["设备管理（EAM）"],
+      "outOfScope": ["财务核算", "HR管理", "OA办公", "生产排程（APS）", "质量追溯（QMS）", "MES车间执行", "订单管理（OMS）", "供应商协同（SRM）"],
+      "futureScope": ["再制造管理", "其他模块待客户确认"],
+      "phases": [
+        {
+          "phase": "一期",
+          "modules": ["EAM设备管理"],
+          "duration": "约6个月",
+          "goals": ["EAM系统上线", "设备管理数字化", "OEE可视化"]
+        },
+        {
+          "phase": "二期",
+          "modules": ["待客户确认"],
+          "duration": "待定",
+          "goals": ["根据一期效果评估"]
+        }
+      ],
+      "priorityMatrix": [
+        { "quadrant": "高价值+低成本", "items": ["EAM设备管理"] },
+        { "quadrant": "高价值+高成本", "items": [] },
+        { "quadrant": "低价值+低成本", "items": [] },
+        { "quadrant": "低价值+高成本", "items": [] }
+      ]
     },
-
     "constraints": {
       "budget": {
-        "total": "",
+        "total": "约100万",
         "breakdown": [],
-        "paymentTerms": "",
-        "flexibility": ""
+        "paymentTerms": "待确认",
+        "flexibility": "中等"
       },
       "timeline": {
-        "expectedStart": "",
-        "expectedGoLive": "",
-        "hardDeadline": "",
-        "reason": "",
-        "flexibility": ""
+        "expectedStart": "2026年4月（推测）",
+        "expectedGoLive": "2026年12月",
+        "hardDeadline": "2026-12-31",
+        "reason": "客户明确要求年底前上线",
+        "flexibility": "低（硬性节点）"
       },
       "resources": {
         "clientTeam": [],
         "availability": "",
-        "constraints": []
+        "constraints": ["9个月实施周期"]
       },
       "technical": {
-        "existingInfrastructure": [],
+        "existingInfrastructure": ["待确认：ERP系统？", "待确认：PLM系统？"],
         "mandatoryTech": [],
         "prohibitedTech": [],
         "networkConstraints": [],
-        "deploymentConstraints": []
+        "deploymentConstraints": ["可能需要私有化部署（国企背景）", "客户倾向定制开发而非纯SaaS"]
       },
       "organizational": {
-        "approvalProcess": "",
+        "approvalProcess": "老板支持，审批快",
         "changeManagement": "",
-        "vendorPolicies": [],
-        "complianceRequirements": []
+        "vendorPolicies": ["可能有集团统一系统要求"],
+        "complianceRequirements": ["国企合规要求", "数据安全要求"]
       }
     },
-
     "successCriteria": {
-      "businessCriteria": [],
-      "technicalCriteria": [],
-      "userCriteria": [],
-      "projectCriteria": [],
+      "businessCriteria": [
+        "提升设备OEE 20%+",
+        "降低设备停机时间",
+        "提升维护计划执行率",
+        "降低备件库存成本"
+      ],
+      "technicalCriteria": [
+        "系统稳定性99.9%+",
+        "数据采集准确率99%+",
+        "与现有系统无缝集成"
+      ],
+      "userCriteria": [
+        "用户培训通过率95%+",
+        "用户满意度80%+",
+        "系统响应时间<3秒"
+      ],
+      "projectCriteria": [
+        "2026年12月前按期交付",
+        "预算控制在100万内",
+        "无重大缺陷"
+      ],
       "roiExpectation": {
-        "expectedBenefits": [],
-        "paybackPeriod": "",
-        "quantifiableMetrics": []
+        "expectedBenefits": ["提升设备利用率", "降低维护成本", "减少停机损失"],
+        "paybackPeriod": "约18个月",
+        "quantifiableMetrics": ["设备OEE提升%", "停机时间缩短%", "维护成本节省%"]
       }
     },
-
     "risksAndAssumptions": {
-      "risks": [],
-      "assumptions": [],
-      "dependencies": []
+      "risks": [
+        { "risk": "SaaS厂商竞对威胁", "probability": "中", "impact": "高", "mitigation": "强调定制化优势，提供SaaS无法满足的深度功能" },
+        { "risk": "9个月实施周期紧张", "probability": "中", "impact": "中", "mitigation": "分阶段交付，核心功能优先上线" },
+        { "risk": "现有系统集成复杂度高", "probability": "中", "impact": "中", "mitigation": "提前评估现有系统，预留集成时间" }
+      ],
+      "assumptions": [
+        "客户有一定数字化基础，现有系统可集成",
+        "EAM核心功能是客户当前最迫切需求",
+        "老板支持意味着决策阻力小"
+      ],
+      "dependencies": [
+        "需要确认现有系统情况",
+        "需要确认EAM具体功能范围",
+        "需要确认是否需要移动端支持"
+      ]
     },
-
     "solutionDirection": {
-      "overallApproach": "",
+      "overallApproach": "基于客户明确EAM需求，建议聚焦EAM核心功能快速交付。客户倾向定制开发而非纯SaaS，这是syncMind切入机会。",
       "recommendedApproach": {
-        "type": "",
-        "rationale": "",
-        "alternatives": []
+        "type": "聚焦EAM，快速交付",
+        "rationale": "客户明确EAM为立项项目，预算100万，9个月实施周期。聚焦EAM可快速交付，建立信任后扩展其他模块。",
+        "alternatives": [
+          "全面实施：覆盖所有模块，周期长、风险高、预算超限",
+          "SaaS方案：客户正在调研但倾向定制，SaaS可能无法满足深度需求"
+        ]
       },
       "technicalDirection": {
-        "architecture": "",
-        "deployment": "",
-        "techStack": []
+        "architecture": "建议采用模块化架构，支持后续扩展",
+        "deployment": "私有化部署（满足国企要求）",
+        "techStack": ["后端：Java/Spring Boot", "前端：Vue3", "移动端：uni-app", "数据库：MySQL/PostgreSQL"]
       },
       "implementationStrategy": {
-        "approach": "",
-        "pilotScope": "",
-        "rolloutPlan": ""
+        "approach": "聚焦EAM核心功能，分阶段交付",
+        "pilotScope": "全厂EAM系统实施",
+        "rolloutPlan": "EAM上线后，根据效果评估是否扩展其他模块"
       },
-      "nextSteps": []
+      "nextSteps": [
+        "安排技术交流，明确EAM功能边界",
+        "提供EAM方案建议书（vs SaaS对比）",
+        "了解现有系统情况（ERP等）",
+        "确认移动端需求"
+      ]
     },
-
-    "pendingQuestions": [],
-
+    "pendingQuestions": [
+      {
+        "id": "PQ-001",
+        "category": "预算",
+        "priority": "必问",
+        "question": "本次项目的预算范围是多少？",
+        "purpose": "决定方案范围和实施方式",
+        "expectedDirection": "预计范围",
+        "targetPerson": "决策人/项目负责人",
+        "relatedNeedIds": [],
+        "impactIfUnknown": "无法确定方案范围，可能导致方案过大或过小",
+        "status": "answered",
+        "answer": "预算约100万",
+        "answeredAt": "2026-03-23"
+      },
+      {
+        "id": "PQ-002",
+        "category": "决策",
+        "priority": "必问",
+        "question": "项目最终的决策人是谁？审批流程是怎样的？",
+        "purpose": "明确决策链，制定销售策略",
+        "expectedDirection": "具体人员和流程",
+        "targetPerson": "对接人",
+        "relatedNeedIds": [],
+        "impactIfUnknown": "销售策略可能偏离，汇报对象错误",
+        "status": "answered",
+        "answer": "老板支持，审批流程快",
+        "answeredAt": "2026-03-23"
+      },
+      {
+        "id": "PQ-003",
+        "category": "时间",
+        "priority": "必问",
+        "question": "期望的上线时间是什么时候？是否有硬性节点？",
+        "purpose": "确定实施计划和资源安排",
+        "expectedDirection": "具体时间或节点",
+        "targetPerson": "项目负责人",
+        "relatedNeedIds": [],
+        "impactIfUnknown": "无法制定合理实施计划",
+        "status": "answered",
+        "answer": "要求年底前上线（2026年12月前）",
+        "answeredAt": "2026-03-23"
+      },
+      {
+        "id": "PQ-004",
+        "category": "业务",
+        "priority": "必问",
+        "question": "当前最核心、最紧迫的业务痛点是什么？",
+        "purpose": "明确优先级和切入点",
+        "expectedDirection": "具体痛点描述",
+        "targetPerson": "生产/质量/设备负责人",
+        "relatedNeedIds": ["REQ-001", "REQ-002", "REQ-003"],
+        "impactIfUnknown": "可能优先级判断错误，方案不聚焦",
+        "status": "pending",
+        "answer": "",
+        "answeredAt": ""
+      },
+      {
+        "id": "PQ-005",
+        "category": "技术",
+        "priority": "必问",
+        "question": "目前已有哪些信息系统（ERP/PLM/CRM等）？厂商和版本？",
+        "purpose": "评估集成复杂度和数据迁移工作量",
+        "expectedDirection": "系统清单",
+        "targetPerson": "IT负责人",
+        "relatedNeedIds": ["TECH-001"],
+        "impactIfUnknown": "集成方案可能不完整，项目风险增加",
+        "status": "pending",
+        "answer": "",
+        "answeredAt": ""
+      },
+      {
+        "id": "PQ-006",
+        "category": "技术",
+        "priority": "选问",
+        "question": "是否有云厂商偏好（阿里云/腾讯云/华为云等）？",
+        "purpose": "确定技术架构选型",
+        "expectedDirection": "云厂商或无偏好",
+        "targetPerson": "IT负责人",
+        "relatedNeedIds": ["TECH-002"],
+        "impactIfUnknown": "可能需要调整技术方案",
+        "status": "pending",
+        "answer": "",
+        "answeredAt": ""
+      },
+      {
+        "id": "PQ-007",
+        "category": "竞对",
+        "priority": "选问",
+        "question": "是否接触过其他供应商？对比情况如何？",
+        "purpose": "了解竞对定位和差异化策略",
+        "expectedDirection": "供应商信息和对比情况",
+        "targetPerson": "对接人",
+        "relatedNeedIds": [],
+        "impactIfUnknown": "差异化策略可能不准确",
+        "status": "answered",
+        "answer": "正在调研SaaS版EAM，也考虑定制开发",
+        "answeredAt": "2026-03-23"
+      },
+      {
+        "id": "PQ-008",
+        "category": "资源",
+        "priority": "选问",
+        "question": "是否需要定制化开发？可接受标准化的程度？",
+        "purpose": "评估项目周期和成本",
+        "expectedDirection": "定制化需求程度",
+        "targetPerson": "项目负责人",
+        "relatedNeedIds": [],
+        "impactIfUnknown": "项目周期和成本估算可能偏差",
+        "status": "answered",
+        "answer": "考虑定制开发（非纯SaaS）",
+        "answeredAt": "2026-03-23"
+      },
+      {
+        "id": "PQ-009",
+        "category": "资源",
+        "priority": "选问",
+        "question": "内部IT团队规模如何？是否支持自主运维？",
+        "purpose": "决定运维服务模式",
+        "expectedDirection": "团队规模和运维能力",
+        "targetPerson": "IT负责人",
+        "relatedNeedIds": [],
+        "impactIfUnknown": "运维服务模式可能不匹配",
+        "status": "pending",
+        "answer": "",
+        "answeredAt": ""
+      },
+      {
+        "id": "PQ-010",
+        "category": "组织",
+        "priority": "选问",
+        "question": "是否有集团统一系统的要求？",
+        "purpose": "确认方案选型范围",
+        "expectedDirection": "是否有统一要求",
+        "targetPerson": "对接人/IT负责人",
+        "relatedNeedIds": [],
+        "impactIfUnknown": "可能被集团要求否决",
+        "status": "pending",
+        "answer": "",
+        "answeredAt": ""
+      },
+      {
+        "id": "PQ-011",
+        "category": "业务",
+        "priority": "必问",
+        "question": "EAM系统具体需要哪些功能模块？（台账/维护/备件/OEE/移动端等）",
+        "purpose": "明确EAM功能边界，制定方案",
+        "expectedDirection": "功能清单",
+        "targetPerson": "设备负责人/IT负责人",
+        "relatedNeedIds": ["REQ-003"],
+        "impactIfUnknown": "方案可能过大或过小",
+        "status": "pending",
+        "answer": "",
+        "answeredAt": ""
+      },
+      {
+        "id": "PQ-012",
+        "category": "业务",
+        "priority": "选问",
+        "question": "当前有多少台设备？需要管理的设备类型有哪些？",
+        "purpose": "评估系统规模和复杂度",
+        "expectedDirection": "设备数量和类型",
+        "targetPerson": "设备负责人",
+        "relatedNeedIds": ["REQ-003"],
+        "impactIfUnknown": "方案规模评估可能偏差",
+        "status": "pending",
+        "answer": "",
+        "answeredAt": ""
+      }
+    ],
     "completionRate": {
-      "overall": 0,
-      "byCategory": {},
-      "blockers": []
+      "overall": 35,
+      "byCategory": {
+        "business": 40,
+        "functional": 15,
+        "technical": 15,
+        "data": 0,
+        "integration": 0,
+        "security": 0,
+        "non-functional": 15
+      },
+      "blockers": [
+        "生产计划数字化排程 [REQ-001]",
+        "全流程质量追溯 [REQ-002]",
+        "现有系统集成 [TECH-001]"
+      ]
     }
   }
 }
